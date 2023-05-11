@@ -1,8 +1,8 @@
 import { Router } from 'express'
 const router = Router()
 
-import { indexWelcome } from '../controllers/index.controller'
+import { serverCheck } from '../controllers/index.controller'
 
-router.route('/').get(indexWelcome)
+router.route('/').get(serverCheck)
 
 export default router;

@@ -1,5 +1,8 @@
 import express, { Application } from "express";
 import morgan from "morgan";
+import compression from "compression";
+import helmet from 'helmet';
+import cors from 'cors'
 
 import indexRoutes from './routes/index.routes';
 import postRoutes from './routes/post.routes'
@@ -21,11 +24,15 @@ export class App {
     middlewares() {
         this.app.use(morgan('dev'))
         this.app.use(express.json())
+        this.app.use(express.urlencoded({ extended: true }))
+        this.app.use(compression())
+        this.app.use(helmet())
+        this.app.use(cors())
     }
 
     routes() {
         this.app.use(indexRoutes)
-        this.app.use('/posts', postRoutes)
+        this.app.use('/api/posts', postRoutes)
     }
 
     async listen() {
