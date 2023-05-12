@@ -1,8 +1,8 @@
-import { Router } from 'express'
-const router = Router()
+import { Router } from 'express';
+const router = Router();
 
-import { serverCheck } from '../controllers/index.controller'
+import { serverCheck } from '../controllers/index.controller';
 
-router.route('/').get(serverCheck)
+router.route('/').get(serverCheck);
 
 export default router;
