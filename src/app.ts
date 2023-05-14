@@ -1,6 +1,11 @@
 import express, { Application } from 'express';
 import morgan from 'morgan';
-//import cors from "cors"
+import * as http from "http"
+import * as path from "path"
+import * as helmet from "helmet"
+import * as favicon from "serve-favicon"
+import * as compression from "compression"
+import * as bodyParser from "body-parser"
 
 // Routes
 import indexRoutes from './routes/index.routes';
