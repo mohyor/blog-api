@@ -11,6 +11,8 @@ import * as bodyParser from "body-parser"
 import indexRoutes from './routes/index.routes';
 import postRoutes from './routes/post.routes';
 
+
+
 export class App {
 
     private app: Application;
