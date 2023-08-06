@@ -25,11 +25,11 @@ export const cachedData = async (req:express.Request, res:express.Response, next
             res.send({payload:JSON.parse(cacheddata)});
         }
         else {
-            next()
+            next();
         }
     }
     catch(error) {
-        res.send(error)
+        res.send(error);
     }
 }
 
