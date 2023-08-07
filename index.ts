@@ -40,7 +40,7 @@ app.get("/users", cachedData, async (req:express.Request, res:express.Response) 
         redisClient.setex("users",10000,JSON.stringify(response.data));
         res.send({payload:response.data});
     } catch(err) {
-        console.log(err)
+        console.log(err);
     }
 })
 
