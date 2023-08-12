@@ -45,5 +45,5 @@ app.get("/users", cachedData, async (req:express.Request, res:express.Response) 
 })
 
 app.listen(3000,() => {
-    console.log("running")
+    console.log("running");
 })
